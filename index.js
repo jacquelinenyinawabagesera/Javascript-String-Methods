@@ -12,7 +12,7 @@ console.log(resultString);
 
 // 3. Count how many times the following string appears in the string variable:1. "the"2."brown"const story= "The quick brown fox jumps over the lazy dog"
 const story = "The quick brown fox jumps over the lazy dog";
-const countWords = story.split(" ")
+const countWords = story.toLocaleLowerCase().split(" ")
 
 let countThe = 0;
 let countBrown = 0;
