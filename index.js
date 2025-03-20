@@ -12,7 +12,7 @@ console.log(resultString);
 
 // 3. Count how many times the following string appears in the string variable:1. "the"2."brown"const story= "The quick brown fox jumps over the lazy dog"
 const story = "The quick brown fox jumps over the lazy dog";
-const countWords = story.toLocaleLowerCase().split(" ")
+const countWords = story.toLowerCase().split(" ")
 
 let countThe = 0;
 let countBrown = 0;
@@ -47,8 +47,12 @@ console.log(str2.toLowerCase());
 const str3 = "UndERneath";
 console.log(str3.toLowerCase());
 
-const originalString = "a wonderful world";
-const textWords = originalString.split(' ');
-const newString = textWords.map(text => text.charAt(0).toUpperCase() + text.slice(1).toLowerCase()).join(' ');
+const originalString = "A wonderful word";
+const textWords = originalString.toLowerCase();
+const newString = textWords.split(" ");
 
-console.log(newString);
+newString.forEach((word, index) => {
+    newString[index] = word.charAt(0).toUpperCase() + word.slice(1);
+});
+
+console.log(newString.join(" "));
